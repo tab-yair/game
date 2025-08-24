@@ -1,4 +1,4 @@
-//Yair Tabak 322593906
+
 package listeners;
 /**
  * The listeners.HitNotifier interface e indicate that objects that implement it
