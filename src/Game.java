@@ -11,7 +11,7 @@ import java.util.List;
  * Author: Yair Tabak 322593906
  * </p>
  */
-public class Ass5Game {
+public class Game {
 
     /**
      * The main method to start the game.
