@@ -1,53 +1,57 @@
-Ass5 Game Project
+# Ass5 Game Project
 
 This repository contains the source code for a Java-based game project. It demonstrates object-oriented design, event handling, and basic game programming concepts.
 
-Project Architecture
+---
+
+## Project Architecture
+
+```
           +-------------------+
           |      Game.java     |  <-- Main entry point, initializes game loop
           +-------------------+
                      |
                      v
         +----------------------+
-        |  GameEnvironment      |  <-- Holds all Collidable objects
+        |   GameEnvironment    |  <-- Holds all Collidable objects
         +----------------------+
            |                 |
            v                 v
-     +----------+       +-----------+
-     |  SpriteCollection |  |  Collidable objects (Blocks, Paddle) |
-     +----------+       +-----------+
+  +----------------+   +----------------+
+  | SpriteCollection | | Collidable objects |
+  |                  | | (Blocks, Paddle)  |
+  +----------------+   +----------------+
            |                 |
            v                 v
-  +----------------+   +----------------+
-  |    Entities    |   |  Listeners     |
-  |  Ball, Block,  |   | BallRemover,   |
-  |  Paddle, etc.  |   | BlockRemover,  |
-  +----------------+   | ScoreTracking  |
-                        +----------------+
+     +-------------+     +----------------+
+     |  Entities   |     |   Listeners    |
+     | Ball, Block,|     | BallRemover,   |
+     | Paddle, etc.|     | BlockRemover,  |
+     +-------------+     | ScoreTracking  |
+                         +----------------+
                               ^
                               |
                         +-------------+
-                        | Geometry    |
+                        |  Geometry   |
                         | Point, Line,|
                         | Rectangle   |
                         +-------------+
+```
 
-Explanation of interactions:
+**Explanation of interactions:**
 
-Game.java initializes the game window, loads all sprites and collidable objects, and runs the main game loop.
+* `Game.java` initializes the game window, loads all sprites and collidable objects, and runs the main game loop.
+* `GameEnvironment` manages all `Collidable` objects and handles collision detection.
+* `SpriteCollection` updates and draws all sprites each frame.
+* `Entities` (Ball, Block, Paddle) are the interactive objects in the game.
+* `Listeners` respond to game events, like hits or score changes.
+* `Geometry` classes provide support for collision calculations.
 
-GameEnvironment manages all Collidable objects and handles collision detection.
+---
 
-SpriteCollection updates and draws all sprites each frame.
+## Project Structure
 
-Entities (Ball, Block, Paddle) are the interactive objects in the game.
-
-Listeners respond to game events, like hits or score changes.
-
-Geometry classes provide support for collision calculations.
-
-                        
-Project Structure
+```
 /src
   Game.java
   /colilision
@@ -78,23 +82,46 @@ Project Structure
     ScoreIndicator.java
   /utils
     Counter.java
+```
 
-    
-How to Run
+---
+
+## How to Run
+
 1. Clone the repository:
+
+```bash
 git clone https://github.com/tab-yair/game.git
 cd game
+```
+
 2. Compile all Java files:
-      javac src/**/*.java
+
+```bash
+javac src/**/*.java
+```
+
+> On Windows, compile subdirectories individually:
+
+```bash
+javac src\*.java src\colilision\*.java src\collections\*.java src\entities\*.java src\game\*.java src\geometry\*.java src\listeners\*.java src\ui\*.java src\utils\*.java
+```
+
 3. Run the main game:
-   java -cp src Game
 
-Requirements
+```bash
+java -cp src Game
+```
 
-Java Development Kit (JDK) 8 or higher.
+---
 
-IDE recommended (IntelliJ, Eclipse, VS Code).
+## Requirements
 
-License
+* Java Development Kit (JDK) 8 or higher.
+* IDE recommended (IntelliJ, Eclipse, VS Code).
 
-This project is licensed under the MIT License (if applicable).   
+---
+
+## License
+
+This project is licensed under the MIT License (if applicable).
