@@ -1,17 +1,18 @@
-# Ass5 Game Project
+# Ass5 Game Project - Arkanoid
 
-This repository contains the source code for a Java-based game project. It demonstrates object-oriented design, event handling, and basic game programming concepts.
+This repository contains the source code for a Java-based Arkanoid-style game project. The game features a player-controlled paddle, bouncing balls, and breakable blocks. It demonstrates object-oriented design, event handling, and basic game programming concepts.
 
 ---
 
 ## Project Overview
 
-The project is a simple Java game that includes balls, blocks, and a paddle controlled by the player. It demonstrates the use of object-oriented programming principles, event listeners, and game loops.
+The project is an **Arkanoid**, where the player controls a paddle to bounce balls and break all the blocks on the screen. It demonstrates the use of object-oriented programming principles, event listeners, and game loops.
 
 ### Key Features
 
-* Ball and paddle movement with collision detection.
-* Score tracking and block removal.
+* Player-controlled paddle movement.
+* Balls that bounce and interact with blocks and the paddle.
+* Block removal and score tracking.
 * Event-driven architecture using listeners.
 * Organized structure with clear separation of responsibilities.
 
