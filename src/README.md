@@ -22,7 +22,7 @@ The project is an **Arkanoid**, where the player controls a paddle to bounce bal
 
 ```
           +-------------------+
-          |      Game.java     |  <-- Main entry point, initializes game loop
+          |      Main.java     |  <-- Main entry point, initializes game loop
           +-------------------+
                      |
                      v
@@ -54,7 +54,7 @@ The project is an **Arkanoid**, where the player controls a paddle to bounce bal
 
 ### Explanation of interactions
 
-* **Game.java**: Initializes the game window, loads sprites and collidable objects, and runs the main game loop.
+* **Main.java**: Initializes the game window, loads sprites and collidable objects, and runs the main game loop.
 * **GameEnvironment**: Manages all `Collidable` objects and handles collision detection.
 * **SpriteCollection**: Updates and draws all sprites each frame.
 * **Entities**: Interactive objects such as Ball, Block, and Paddle.
@@ -67,7 +67,7 @@ The project is an **Arkanoid**, where the player controls a paddle to bounce bal
 
 ```
 /src
-  Game.java
+  Main.java
   /colilision
     Collidable.java
     CollisionInfo.java
@@ -161,7 +161,7 @@ javac src\*.java src\colilision\*.java src\collections\*.java src\entities\*.jav
 3. Run the main game:
 
 ```bash
-java -cp src Game
+java -cp src Main
 ```
 
 ---
