@@ -1,4 +1,4 @@
-# Ass5 Game Project - Arkanoid
+# Game Project - Arkanoid
 
 This repository contains the source code for a Java-based Arkanoid-style game project. The game features a player-controlled paddle, bouncing balls, and breakable blocks. It demonstrates object-oriented design, event handling, and basic game programming concepts.
 
