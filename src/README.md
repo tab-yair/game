@@ -4,6 +4,19 @@ This repository contains the source code for a Java-based game project. It demon
 
 ---
 
+## Project Overview
+
+The project is a simple Java game that includes balls, blocks, and a paddle controlled by the player. It demonstrates the use of object-oriented programming principles, event listeners, and game loops.
+
+### Key Features
+
+* Ball and paddle movement with collision detection.
+* Score tracking and block removal.
+* Event-driven architecture using listeners.
+* Organized structure with clear separation of responsibilities.
+
+---
+
 ## Project Architecture
 
 ```
@@ -38,14 +51,14 @@ This repository contains the source code for a Java-based game project. It demon
                         +-------------+
 ```
 
-**Explanation of interactions:**
+### Explanation of interactions
 
-* `Game.java` initializes the game window, loads all sprites and collidable objects, and runs the main game loop.
-* `GameEnvironment` manages all `Collidable` objects and handles collision detection.
-* `SpriteCollection` updates and draws all sprites each frame.
-* `Entities` (Ball, Block, Paddle) are the interactive objects in the game.
-* `Listeners` respond to game events, like hits or score changes.
-* `Geometry` classes provide support for collision calculations.
+* **Game.java**: Initializes the game window, loads sprites and collidable objects, and runs the main game loop.
+* **GameEnvironment**: Manages all `Collidable` objects and handles collision detection.
+* **SpriteCollection**: Updates and draws all sprites each frame.
+* **Entities**: Interactive objects such as Ball, Block, and Paddle.
+* **Listeners**: Handle game events (hits, score updates, ball removal).
+* **Geometry**: Provides basic geometric classes for collision calculations.
 
 ---
 
@@ -86,6 +99,43 @@ This repository contains the source code for a Java-based game project. It demon
 
 ---
 
+## Class Descriptions
+
+**Entities:**
+
+* **Ball.java**: Handles movement, velocity, and collision with blocks/paddle.
+* **Block.java**: Represents blocks that can be hit and removed.
+* **Paddle.java**: Player-controlled paddle; interacts with balls.
+* **Sprite.java**: Interface for drawable and updatable objects.
+* **Velocity.java**: Encapsulates speed and direction for moving objects.
+
+**Collision:**
+
+* **Collidable.java**: Interface for objects that can be collided with.
+* **CollisionInfo.java**: Stores collision details (point, object hit).
+
+**Collections:**
+
+* **GameEnvironment.java**: Holds and manages all collidable objects.
+* **SpriteCollection.java**: Holds all sprites and updates/draws them each frame.
+
+**Listeners:**
+
+* **HitListener.java / HitNotifier.java**: Observer pattern for hit events.
+* **BallRemover.java / BlockRemover.java**: Remove balls or blocks on certain events.
+* **ScoreTrackingListener.java**: Updates the score when blocks are hit.
+
+**UI & Utils:**
+
+* **ScoreIndicator.java**: Displays score on the screen.
+* **Counter.java**: Utility for tracking counts like score or remaining balls.
+
+**Geometry:**
+
+* **Point.java, Line.java, Rectangle.java**: Basic geometric classes for collision calculations.
+
+---
+
 ## How to Run
 
 1. Clone the repository:
@@ -119,6 +169,14 @@ java -cp src Game
 
 * Java Development Kit (JDK) 8 or higher.
 * IDE recommended (IntelliJ, Eclipse, VS Code).
+
+---
+
+## Optional Enhancements
+
+* Add more block types or power-ups.
+* Extend UI elements for levels or player lives.
+* Add sound effects and animations.
 
 ---
 
