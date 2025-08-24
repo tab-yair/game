@@ -5,10 +5,10 @@ import game.Game;
 import java.util.List;
 
 /**
- * The Ass3Game class contains the main method to start and run the game.
+ * The Game class contains the main method to start and run the game.
  * It initializes a new Game instance, sets it up, and starts the game loop.
  * <p>
- * Author: Yair Tabak 322593906
+ * Author: Yair Tabak 
  * </p>
  */
 public class Game {
