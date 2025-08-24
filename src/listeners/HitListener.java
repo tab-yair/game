@@ -1,4 +1,4 @@
-//Yair Tabak 322593906
+
 package listeners;
 import entities.Ball;
 import entities.Block;
