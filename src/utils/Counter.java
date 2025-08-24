@@ -1,4 +1,4 @@
-//Yair Tabak 322593906
+
 package utils;
 /**
  * The Counter class is a simple class that is used for counting things.
