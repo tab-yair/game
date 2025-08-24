@@ -1,4 +1,4 @@
-// Yair Tabak 322593906
+
 package entities;
 import biuoop.DrawSurface;
 import biuoop.KeyboardSensor;
