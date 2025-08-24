@@ -1,4 +1,4 @@
-//Yair Tabak 322593906
+
 package collections;
 import colilision.Collidable;
 import colilision.CollisionInfo;
